@@ -1,5 +1,31 @@
 from time import *
-#V5 3. Rühm 20 õpilast sooritas ühe sessiooni jooksul kolm eksamit. Tehke algoritm eksamivormi täitmiseks.
+
+#V2 3. Pärast treeningutega alustamist jooksis sportlane esimesel päeval 10 km. 
+#Iga päev suurendas ta oma päevanormi 10% võrra eelmise päeva normist. Kui palju on kogu distants, mille sportlane 7 päeva jooksul läbib?
+kaugus = 10
+kogudistants = 0
+
+for p in range(7):
+    kogudistants += kaugus
+    kaugus *= 1.1  
+print(f"Kogu läbitud distants 7 päeva jooksul: {kogudistants} km")
+
+#V2 2.Kirjutage programm, mis küsib täisarvu ja väljastab mis tahes selle väärtuse, 
+#välja arvatud13. Kui antud arv on13, siis trükitakse selle asemel arv 77.
+while True:
+    try:
+        n=int(input("Sisesta arv: "))
+        if n==13:
+            print("77")
+        else:
+            print(n)
+        break
+    except:
+        print("Viga!")
+
+
+
+# V5 3. Rühm 20 õpilast sooritas ühe sessiooni jooksul kolm eksamit. Tehke algoritm eksamivormi täitmiseks.
 for õ in range(20):
     print(f"Soritab eksamit {õ+1}. õpilane")
     for e in range(3):
